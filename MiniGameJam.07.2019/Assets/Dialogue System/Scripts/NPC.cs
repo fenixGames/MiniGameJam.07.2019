@@ -7,6 +7,10 @@ public class NPC : MonoBehaviour
     [SerializeField]
     private Dialogue dialogue = null; //the dialogue held by this NPC.
 
+    [SerializeField]
+    private GameObject indicator = null;
+    public void DisableIndicator () { indicator.SetActive(false); }
+
     public bool IsLocked { set; get; }
 
     private DialogueManager manager;

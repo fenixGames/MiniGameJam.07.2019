@@ -99,6 +99,7 @@ public class DialogueManager : MonoBehaviour
         if (correct) //if the answer is correct
         {
             currentNPC.IsLocked = true; //lock the NPC
+            currentNPC.DisableIndicator();
 
             AudioManager.instance.PlayAudio(correctAudio);
         }
