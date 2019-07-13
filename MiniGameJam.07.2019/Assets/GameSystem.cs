@@ -16,7 +16,6 @@ public class GameSystem : MonoBehaviour
     void Start()
     {
         numberOfSuccessfulAttempts = 0;
-        GameOver(); //// remove
     }
 
     // Update is called once per frame
