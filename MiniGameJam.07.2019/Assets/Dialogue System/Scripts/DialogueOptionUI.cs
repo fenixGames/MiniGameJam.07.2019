@@ -9,12 +9,10 @@ public class DialogueOptionUI : MonoBehaviour
     private Text messageText;
 
     private Dialogue.Option option;
-    private DialogueManager manager;
 
     //initialize this component
-    public void Init (DialogueManager manager, Dialogue.Option option)
+    public void Init (Dialogue.Option option)
     {
-        this.manager = manager;
         this.option = option;
 
         messageText.text = option.message;
@@ -25,6 +23,6 @@ public class DialogueOptionUI : MonoBehaviour
     //called when the player clicks on the dialogue option button
     public void OnClick ()
     {
-        manager.OnOptionClick(option.status);
+        DialogueManager.instance.OnOptionClick(option.status);
     }
 }

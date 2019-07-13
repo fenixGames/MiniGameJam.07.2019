@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager instance = null;
+
     //UI elements:
     [SerializeField]
     private GameObject panel = null;
@@ -23,6 +25,11 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(instance);
+
         Hide();
     }
 
@@ -56,7 +63,7 @@ public class DialogueManager : MonoBehaviour
 
             activeOptions.Push(optionUI);
 
-            optionUI.Init(this, option);
+            optionUI.Init(option);
         }
 
         panel.SetActive(true); 
@@ -78,15 +85,13 @@ public class DialogueManager : MonoBehaviour
 
     public void OnOptionClick (bool correct)
     {
-        print(correct);
-
         //remove health in case of uncorrect answer
         if(correct) //if the answer is correct
-        {
             currentNPC.IsLocked = true; //lock the NPC
-        }
 
         Hide();
+
+        GameSystem.instance.UpdateState(correct); //update the state depending on the answer
     }
 
 }
