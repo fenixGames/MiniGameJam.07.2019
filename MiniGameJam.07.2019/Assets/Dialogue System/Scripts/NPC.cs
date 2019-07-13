@@ -18,7 +18,7 @@ public class NPC : MonoBehaviour
     }
 
     //called when the player clicks on the mouse
-    private void OnMouseDown()
+    public void OnClick()
     {
         if (IsLocked)
             return;
