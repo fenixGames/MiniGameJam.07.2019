@@ -8,7 +8,7 @@ public class Dialogue : ScriptableObject
 {
     //message to appear in the dialogue
     [SerializeField]
-    private string message = "MESSAGE";
+    private string message;
     public string GetMessage () { return message; }
 
     //list of dialogue options:

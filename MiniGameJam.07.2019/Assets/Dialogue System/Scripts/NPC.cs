@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     [SerializeField]
-    private Dialogue dialogue = new Dialogue(); //the dialogue held by this NPC.
+    private Dialogue dialogue = null; //the dialogue held by this NPC.
 
     public bool IsLocked { set; get; }
 
@@ -20,7 +20,7 @@ public class NPC : MonoBehaviour
     //called when the player clicks on the mouse
     private void OnMouseDown()
     {
-        if (!IsLocked)
+        if (IsLocked)
             return;
 
         manager.Display(dialogue, this);

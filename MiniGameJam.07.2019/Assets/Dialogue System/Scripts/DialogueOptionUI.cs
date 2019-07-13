@@ -18,6 +18,8 @@ public class DialogueOptionUI : MonoBehaviour
         this.option = option;
 
         messageText.text = option.message;
+
+        gameObject.SetActive(true);
     }
 
     //called when the player clicks on the dialogue option button

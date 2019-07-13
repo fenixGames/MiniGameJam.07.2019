@@ -21,11 +21,19 @@ public class DialogueManager : MonoBehaviour
     private Dialogue currentDialogue = null;
     private NPC currentNPC = null;
 
+    private void Awake()
+    {
+        Hide();
+    }
+
     //called to display a dialogue
     public void Display (Dialogue dialogue, NPC npc)
     {
+        Hide();
+
         currentDialogue = dialogue;
         currentNPC = npc;
+
         RefreshUI();
     }
 
@@ -71,13 +79,14 @@ public class DialogueManager : MonoBehaviour
     public void OnOptionClick (bool correct)
     {
         print(correct);
-        Hide();
 
         //remove health in case of uncorrect answer
         if(correct) //if the answer is correct
         {
             currentNPC.IsLocked = true; //lock the NPC
         }
+
+        Hide();
     }
 
 }
