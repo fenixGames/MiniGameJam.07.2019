@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DialogueOptionUI : MonoBehaviour
 {
     [SerializeField]
-    private Text messageText;
+    private Text messageText = null;
 
     private Dialogue.Option option;
 
