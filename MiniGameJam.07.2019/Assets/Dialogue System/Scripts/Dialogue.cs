@@ -19,6 +19,6 @@ public class Dialogue : ScriptableObject
         public string message; //the dialogue's option answer
     }
     [SerializeField]
-    private List<Option> options = new List<Option>();
+    private List<Option> options;
     public IEnumerable<Option> GetOptions () { return options; }
 }
