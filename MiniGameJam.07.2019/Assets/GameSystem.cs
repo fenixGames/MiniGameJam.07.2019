@@ -8,8 +8,10 @@ public class GameSystem : MonoBehaviour
 {
     public static GameSystem instance = null; //only one instance per game
 
-    private CanvasGroup gameOverBG;
-    private CanvasGroup gameOverImage;
+    [SerializeField]
+    private CanvasGroup gameOverBG = null;
+    [SerializeField]
+    private CanvasGroup gameOverImage = null;
     private bool isGameOver = false;
 
     // Start is called before the first frame update
@@ -94,22 +96,17 @@ public class GameSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isGameOver)
-        {
-            if (Input.anyKey)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
+        if (!isGameOver)
             return;
-        }
+
+        if (Input.anyKey)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     void GameOver()
     {
-        var bgObj = GameObject.Find("GameOverBG");
-        gameOverBG = bgObj.GetComponent<CanvasGroup>();
-        var imageObj = GameObject.Find("GameOverImage");
-        gameOverImage = imageObj.GetComponent<CanvasGroup>();
+        gameOverBG.gameObject.SetActive(true);
+        gameOverImage.gameObject.SetActive(true);
         StartCoroutine("GameOverFadeIn");
     }
 
