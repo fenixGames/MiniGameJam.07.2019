@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
 {
@@ -9,7 +10,11 @@ public class NPC : MonoBehaviour
 
     [SerializeField]
     private GameObject indicator = null;
-    public void DisableIndicator () { if(indicator) indicator.SetActive(false); }
+    public void DisableIndicator () {
+        Color lastColor = Color.white;
+        lastColor.a = 0.2f;
+        indicator.GetComponent<Image>().color = lastColor;
+    }
 
     public bool IsLocked { set; get; }
 

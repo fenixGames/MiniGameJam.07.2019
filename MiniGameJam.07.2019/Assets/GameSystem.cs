@@ -34,15 +34,20 @@ public class GameSystem : MonoBehaviour
         public Stack<Image> instances;
         public GridLayoutGroup parent;
 
-        public void Init(int amount, Image prefab)
+        public void Init(int amount, Image prefab, bool isLife)
         {
             instances = new Stack<Image>();
+
+            Color nextColor = Color.white;
+            nextColor.a = isLife ? 1.0f : 0.3f;
 
             for(int i = 0; i < amount; i++)
             {
                 Image newImage = Instantiate(prefab);
                 newImage.sprite = sprite;
                 newImage.transform.SetParent(parent.transform, true);
+
+                newImage.color = nextColor;
 
                 instances.Push(newImage);
             }
@@ -53,8 +58,15 @@ public class GameSystem : MonoBehaviour
             if (instances.Count <= 0)
                 return;
 
-            Image remImage = instances.Pop();
-            remImage.gameObject.SetActive(false);
+            Image nextImg = instances.Pop();
+            if(nextImg.color.a == 1.0f)
+            {
+                Color nextColor = Color.white;
+                nextColor.a = 0.2f;
+                nextImg.color = nextColor;
+            }
+            else
+                nextImg.color = Color.white;
         }
     }
 
@@ -79,8 +91,8 @@ public class GameSystem : MonoBehaviour
             Destroy(instance);
 
         //init the lives and required UI code:
-        livesUI.Init(lives, imagePrefab);
-        answersUI.Init(requiredAnswers, imagePrefab);
+        livesUI.Init(lives, imagePrefab, true);
+        answersUI.Init(requiredAnswers, imagePrefab, false);
     }
 
     //called when the player answers a dialogue
@@ -94,6 +106,7 @@ public class GameSystem : MonoBehaviour
             if(requiredAnswers <= 0)
             {
                 AudioManager.instance.PlayAudio(successAudio);
+                AudioManager.instance.UpdateMusicVolume(0.2f);
                 loadingScene = true;
             }
         }
