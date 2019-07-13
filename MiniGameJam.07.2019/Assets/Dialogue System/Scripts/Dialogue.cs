@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Linq;
 
 [CreateAssetMenu (fileName = "newDialogue", menuName = "MiniJam.07.2019/Dialogue")]
 public class Dialogue : ScriptableObject
@@ -20,5 +21,6 @@ public class Dialogue : ScriptableObject
     }
     [SerializeField]
     private List<Option> options = null;
-    public IEnumerable<Option> GetOptions () { return options; }
+    public IEnumerable<Option> GetOptions () {
+        return options.OrderBy<Option, int>(i => Random.Range(-1,1)); }
 }
