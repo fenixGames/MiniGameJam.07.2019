@@ -1507,7 +1507,7 @@ MonoBehaviour:
   optionUIPrefab: {fileID: 7359377656404764324, guid: da57fb283e2f6e24f9a29c4abee37354,
     type: 3}
   correctAudio: {fileID: 8300000, guid: 942bd3e8773703d43b636baff147e162, type: 3}
-  wrongAudio: {fileID: 8300000, guid: 206a89f8049cb6c4fbb6b36c20e6cea4, type: 3}
+  wrongAudio: {fileID: 8300000, guid: 7a25bef31a88772498daad6a06e8f836, type: 3}
 --- !u!1 &3327626996270281339
 GameObject:
   m_ObjectHideFlags: 0
