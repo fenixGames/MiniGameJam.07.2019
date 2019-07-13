@@ -12,6 +12,10 @@ public class Dialogue : ScriptableObject
     private string message = null;
     public string GetMessage () { return message; }
 
+    [SerializeField]
+    private AudioClip voiceOver = null;
+    public AudioClip GetVoiceOver() { return voiceOver; }
+
     //list of dialogue options:
     [System.Serializable]
     public struct Option

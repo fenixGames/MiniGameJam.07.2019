@@ -11,6 +11,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private AudioSource musicSource = null;
 
+    [SerializeField]
+    private AudioSource voiceOverSource = null;
+
     private AudioSource source;
 
     private void Awake()
@@ -31,6 +34,17 @@ public class AudioManager : MonoBehaviour
     {
         source.clip = clip;
         source.Play();
+    }
+
+    public void UpdateVoiceOver (bool play, AudioClip clip = null)
+    {
+        if (!play)
+            voiceOverSource.Stop();
+        else
+        {
+            voiceOverSource.clip = clip;
+            voiceOverSource.Play();
+        }
     }
 
 }
