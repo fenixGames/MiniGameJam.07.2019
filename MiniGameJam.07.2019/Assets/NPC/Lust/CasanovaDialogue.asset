@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd9d7629b4253a428f20536525db3cc, type: 3}
+  m_Name: CasanovaDialogue
+  m_EditorClassIdentifier: 
+  message: '<b>Casanova</b>: <i>famous for his often complicated and elaborate affairs
+    with women</i>
+
+
+    So how do you know whether a girl likes surprises or not ?'
+  voiceOver: {fileID: 0}
+  options:
+  - status: 0
+    message: You sneak on her back and startle her
+  - status: 0
+    message: "Tell her you forgot your \u201Ccoat\u201D, you\u2019ll find out "
+  - status: 0
+    message: 'Drop on you knee on a restaurant and see what happens '
+  - status: 1
+    message: "Well if she likes surprises, she must be dating a black guy who\u2019s
+      also an asian"
