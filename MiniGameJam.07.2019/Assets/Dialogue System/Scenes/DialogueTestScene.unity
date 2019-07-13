@@ -645,7 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96010ee51d9abf741aaa1941bff1aa89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicLoop: {fileID: 0}
+  musicLoop: {fileID: 8300000, guid: 045e7eb89ae0996458f2159ca6c21b23, type: 3}
   musicSource: {fileID: 1221336826}
 --- !u!1 &476479228
 GameObject:
