@@ -46,6 +46,7 @@ public class GameSystem : MonoBehaviour
                 Image newImage = Instantiate(prefab);
                 newImage.sprite = sprite;
                 newImage.transform.SetParent(parent.transform, true);
+                newImage.transform.localScale = Vector3.one;
 
                 newImage.color = nextColor;
 

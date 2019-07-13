@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd9d7629b4253a428f20536525db3cc, type: 3}
   m_Name: CharlemagneDialogue
   m_EditorClassIdentifier: 
-  message: "<b>Charlemagne</b>: <i>the emperor Charlemagne fell in love with a German
-    girl. When she suddenly died, Charlemagne\u2019s love did not die with her.\r</i>\n\nWhat
-    is the difference in having a granny fetish and necrophilia?"
+  message: "<b>Charlemagne</b>: <i>When her lover suddenly died, Charlemagne\u2019s
+    love did not die with her.\r</i>\n\nWhat is the difference in having a granny
+    fetish and necrophilia?"
   voiceOver: {fileID: 8300000, guid: 4c98110f268350b449ce307300ae4625, type: 3}
   options:
   - status: 0
