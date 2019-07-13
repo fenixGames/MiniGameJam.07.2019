@@ -17,10 +17,10 @@ MonoBehaviour:
   voiceOver: {fileID: 0}
   options:
   - status: 0
-    message: 
+    message: 'Catch them in your bed '
   - status: 0
-    message: 
+    message: 'You have to pay for birth control for them. '
   - status: 0
-    message: 
-  - status: 0
-    message: 
+    message: 'What brother? I only have a very hairy sister. '
+  - status: 1
+    message: 'Your wife cheating on you with her brother. '
