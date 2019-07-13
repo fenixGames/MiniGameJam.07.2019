@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   message: "<b>Semiramis</b>: <i>Assyrian Queen who made lawful the acts of lechery.</i>\n\nWhat\u2019s
     worse than your wife cheating on you with your brother?"
-  voiceOver: {fileID: 0}
+  voiceOver: {fileID: 8300000, guid: 0748864bbd5743b4faf8a857d2bb1cef, type: 3}
   options:
   - status: 0
     message: 'Catch them in your bed '

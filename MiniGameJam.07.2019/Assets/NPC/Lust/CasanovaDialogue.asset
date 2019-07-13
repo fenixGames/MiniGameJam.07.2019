@@ -17,7 +17,7 @@ MonoBehaviour:
 
 
     So how do you know whether a girl likes surprises or not ?'
-  voiceOver: {fileID: 0}
+  voiceOver: {fileID: 8300000, guid: b914df0e3db260844baadd2a306b0665, type: 3}
   options:
   - status: 0
     message: You sneak on her back and startle her
