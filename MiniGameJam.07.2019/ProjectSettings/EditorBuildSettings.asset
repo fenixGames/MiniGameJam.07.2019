@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Limbo.unity
+    guid: 844d34a56c5203e4b8afb323fa7e6ecd
+  - enabled: 1
+    path: Assets/Scenes/Lust.unity
+    guid: 2002803c27b797c47ae669696690e462
   m_configObjects: {}

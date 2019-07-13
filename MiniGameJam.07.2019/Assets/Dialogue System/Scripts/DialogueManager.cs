@@ -65,6 +65,7 @@ public class DialogueManager : MonoBehaviour
             {
                 optionUI = Instantiate(optionUIPrefab);
                 optionUI.transform.SetParent(optionUIParent.transform, true);
+                optionUI.transform.localScale = Vector3.one;
             }
 
             activeOptions.Push(optionUI);
