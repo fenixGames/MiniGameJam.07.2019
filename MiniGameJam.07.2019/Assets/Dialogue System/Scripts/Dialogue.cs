@@ -17,7 +17,6 @@ public class Dialogue : ScriptableObject
     {
         public bool status; //is this the right/wrong answer?
         public string message; //the dialogue's option answer
-        public UnityEvent triggerEvent;
     }
     [SerializeField]
     private List<Option> options = new List<Option>();
