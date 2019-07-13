@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bd9d7629b4253a428f20536525db3cc, type: 3}
-  m_Name: SocratesDialogue
+  m_Name: EuclidDialogue
   m_EditorClassIdentifier: 
-  message: "<b>Socrates</b>: <i>classical Greek philosopher\r</i>\n\nHow do you teach
-    a child about philosophy?"
+  message: '<b>Euclid</b>: <i>Greek mathematician.</i>
+
+
+    What do you call a teapot of boiling water on top of mount everest?'
   options:
   - status: 0
-    message: Sell him to the nearest philosopher and forget about him
+    message: Monk tea set
   - status: 0
-    message: Make him homeless, life will teach him
+    message: Lonely tea party
   - status: 0
-    message: Buy a book, a very dick one.
+    message: Impossible, it is freezing up there!
   - status: 1
-    message: "Give him a tub of Plato, He\u2019ll eat it right up"
+    message: A high-pot-in-use

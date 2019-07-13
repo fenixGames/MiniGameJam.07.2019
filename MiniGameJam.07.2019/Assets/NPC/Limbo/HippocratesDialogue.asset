@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bd9d7629b4253a428f20536525db3cc, type: 3}
-  m_Name: SocratesDialogue
+  m_Name: HippocratesDialogue
   m_EditorClassIdentifier: 
-  message: "<b>Socrates</b>: <i>classical Greek philosopher\r</i>\n\nHow do you teach
-    a child about philosophy?"
+  message: '<b>Hippocrates</b>: <i>Greek physician.</i>
+
+
+    How come Hypocrates never made the cut as a doctor?'
   options:
   - status: 0
-    message: Sell him to the nearest philosopher and forget about him
+    message: High cut from his dealer
   - status: 0
-    message: Make him homeless, life will teach him
+    message: No money for college
   - status: 0
-    message: Buy a book, a very dick one.
+    message: Just be-Kos
   - status: 1
-    message: "Give him a tub of Plato, He\u2019ll eat it right up"
+    message: "Nobody wanted to give im a hand\u2026 or a foot\u2026 to cut off"
