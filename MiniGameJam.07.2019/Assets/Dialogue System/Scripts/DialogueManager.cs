@@ -19,6 +19,12 @@ public class DialogueManager : MonoBehaviour
     private Stack<DialogueOptionUI> activeOptions = new Stack<DialogueOptionUI>();
     private Stack<DialogueOptionUI> inactiveOptions = new Stack<DialogueOptionUI>();
 
+    //sound effects:
+    [SerializeField]
+    private AudioClip correctAudio = null;
+    [SerializeField]
+    private AudioClip wrongAudio = null;
+
     //current dialogue info:
     private Dialogue currentDialogue = null;
     private NPC currentNPC = null;
@@ -86,12 +92,17 @@ public class DialogueManager : MonoBehaviour
     public void OnOptionClick (bool correct)
     {
         //remove health in case of uncorrect answer
-        if(correct) //if the answer is correct
+        if (correct) //if the answer is correct
+        {
             currentNPC.IsLocked = true; //lock the NPC
+
+            AudioManager.instance.PlayAudio(correctAudio);
+        }
+        else
+            AudioManager.instance.PlayAudio(wrongAudio);
 
         Hide();
 
         GameSystem.instance.UpdateState(correct); //update the state depending on the answer
     }
-
 }

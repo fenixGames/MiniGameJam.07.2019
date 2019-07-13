@@ -8,7 +8,7 @@ public class Dialogue : ScriptableObject
 {
     //message to appear in the dialogue
     [SerializeField]
-    private string message;
+    private string message = null;
     public string GetMessage () { return message; }
 
     //list of dialogue options:
@@ -19,6 +19,6 @@ public class Dialogue : ScriptableObject
         public string message; //the dialogue's option answer
     }
     [SerializeField]
-    private List<Option> options;
+    private List<Option> options = null;
     public IEnumerable<Option> GetOptions () { return options; }
 }
