@@ -16,7 +16,7 @@ MonoBehaviour:
 
 
     What would give you access to my back door?'
-  voiceOver: {fileID: 0}
+  voiceOver: {fileID: 8300000, guid: 228d95de304c8ac4f808b19524c7f1c2, type: 3}
   options:
   - status: 0
     message: A good picking line.
