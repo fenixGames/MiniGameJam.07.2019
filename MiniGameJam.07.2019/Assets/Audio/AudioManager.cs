@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     private AudioClip musicLoop = null;
     [SerializeField]
     private AudioSource musicSource = null;
+    public void UpdateMusicVolume (float volume) { musicSource.volume = volume; }
 
     [SerializeField]
     private AudioSource voiceOverSource = null;

@@ -16,6 +16,7 @@ MonoBehaviour:
 
 
     How do you teach a child about philosophy?'
+  voiceOver: {fileID: 8300000, guid: 73090d116ad513442b928d00b5e69c50, type: 3}
   options:
   - status: 0
     message: Sell him to the nearest philosopher and forget about him

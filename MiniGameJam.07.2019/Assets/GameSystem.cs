@@ -18,6 +18,15 @@ public class GameSystem : MonoBehaviour
     [SerializeField]
     private Image imagePrefab = null;
 
+    [SerializeField]
+    private AudioClip successAudio = null;
+    [SerializeField]
+    private AudioClip failAudio = null;
+
+    [SerializeField]
+    private float loadSceneTimer = 5.0f;
+    private bool loadingScene = false;
+
     [System.Serializable]
     public struct UIGroup
     {
@@ -84,7 +93,8 @@ public class GameSystem : MonoBehaviour
 
             if(requiredAnswers <= 0)
             {
-                SceneManager.LoadScene(nextLevelName);
+                AudioManager.instance.PlayAudio(successAudio);
+                loadingScene = true;
             }
         }
         else //false answer
@@ -99,6 +109,13 @@ public class GameSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(loadingScene)
+        {
+            loadSceneTimer -= Time.deltaTime;
+            if(loadSceneTimer <= 0)
+                SceneManager.LoadScene(nextLevelName);
+        }
+
         if (!isGameOver)
             return;
 
@@ -110,6 +127,8 @@ public class GameSystem : MonoBehaviour
     {
         gameOverBG.gameObject.SetActive(true);
         gameOverImage.gameObject.SetActive(true);
+        AudioManager.instance.PlayAudio(failAudio);
+        AudioManager.instance.UpdateMusicVolume(0.2f);
         StartCoroutine("GameOverFadeIn");
     }
 

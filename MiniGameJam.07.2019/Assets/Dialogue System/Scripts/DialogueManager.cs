@@ -35,8 +35,6 @@ public class DialogueManager : MonoBehaviour
             instance = this;
         else if (instance != this)
             Destroy(instance);
-
-        Hide();
     }
 
     //called to display a dialogue
@@ -46,6 +44,8 @@ public class DialogueManager : MonoBehaviour
 
         currentDialogue = dialogue;
         currentNPC = npc;
+
+        AudioManager.instance.UpdateVoiceOver(true, dialogue.GetVoiceOver());
 
         RefreshUI();
     }
@@ -81,6 +81,8 @@ public class DialogueManager : MonoBehaviour
         currentNPC = null;
         panel.SetActive(false);
 
+        AudioManager.instance.UpdateVoiceOver(false);
+
         while(activeOptions.Count > 0)
         {
             DialogueOptionUI nextOption = activeOptions.Pop();
@@ -91,6 +93,8 @@ public class DialogueManager : MonoBehaviour
 
     public void OnOptionClick (bool correct)
     {
+        AudioManager.instance.UpdateVoiceOver(false);
+
         //remove health in case of uncorrect answer
         if (correct) //if the answer is correct
         {
