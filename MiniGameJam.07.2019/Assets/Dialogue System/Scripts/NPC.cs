@@ -9,7 +9,7 @@ public class NPC : MonoBehaviour
 
     [SerializeField]
     private GameObject indicator = null;
-    public void DisableIndicator () { indicator.SetActive(false); }
+    public void DisableIndicator () { if(indicator) indicator.SetActive(false); }
 
     public bool IsLocked { set; get; }
 

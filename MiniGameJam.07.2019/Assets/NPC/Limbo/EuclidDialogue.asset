@@ -16,6 +16,7 @@ MonoBehaviour:
 
 
     What do you call a teapot of boiling water on top of mount everest?'
+  voiceOver: {fileID: 8300000, guid: 1d50d513bdb057e4fbdc284cc881956f, type: 3}
   options:
   - status: 0
     message: Monk tea set
