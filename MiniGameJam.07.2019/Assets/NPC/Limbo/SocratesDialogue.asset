@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd9d7629b4253a428f20536525db3cc, type: 3}
   m_Name: SocratesDialogue
   m_EditorClassIdentifier: 
-  message: '<b>Socrates</b>: w/e
+  message: '<b>Socrates</b>: <i>classical Greek philosopher</i>
 
 
     How do you teach a child about philosophy?'

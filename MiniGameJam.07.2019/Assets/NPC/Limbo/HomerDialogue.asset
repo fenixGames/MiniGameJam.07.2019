@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd9d7629b4253a428f20536525db3cc, type: 3}
   m_Name: HomerDialogue
   m_EditorClassIdentifier: 
-  message: '<b>Homer</b>: <i>author of the Iliad and the Odysee<i>
+  message: '<b>Homer</b>: <i>author of the Iliad and the Odysee</i>
 
 
     What would give you access to my back door?'
+  voiceOver: {fileID: 0}
   options:
   - status: 0
     message: A good picking line.
