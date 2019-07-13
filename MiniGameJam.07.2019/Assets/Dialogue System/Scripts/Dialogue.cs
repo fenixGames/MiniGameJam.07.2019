@@ -8,7 +8,7 @@ using System.Linq;
 public class Dialogue : ScriptableObject
 {
     //message to appear in the dialogue
-    [SerializeField]
+    [SerializeField, TextArea]
     private string message = null;
     public string GetMessage () { return message; }
 

@@ -59,6 +59,9 @@ public class GameSystem : MonoBehaviour
     [SerializeField]
     private UIGroup answersUI = new UIGroup();
 
+    [SerializeField]
+    private string nextLevelName = "next_level";
+
     private void Awake()
     {
         if (instance == null)
@@ -81,7 +84,7 @@ public class GameSystem : MonoBehaviour
 
             if(requiredAnswers <= 0)
             {
-                //nextLevel();
+                SceneManager.LoadScene(nextLevelName);
             }
         }
         else //false answer
